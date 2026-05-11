@@ -1,12 +1,12 @@
 import React from 'react'
-import Sidebar from './Sidebar'
+import SidebarComp from './Sidebar'
 
 type Props = {}
 
 export default function Index({ }: Props) {
   return (
     <div>
-      <Sidebar />
+      <SidebarComp />
     </div>
   )
 }
