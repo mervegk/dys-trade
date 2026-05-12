@@ -1,5 +1,4 @@
 'use client'
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import {
   Sidebar,
   SidebarContent,
@@ -11,11 +10,10 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import {
-  LayoutIcon,
-  UsersIcon,
-  PackageIcon,
-  GearIcon,
-  CaretDownIcon
+  NotePencilIcon,
+  HouseIcon,
+  CreditCardIcon,
+  BuildingsIcon
 } from "@phosphor-icons/react"
 
 type Props = {}
@@ -24,51 +22,51 @@ export default function SidebarComp({ }: Props) {
 
   const items = [
     {
-      title: "Dashboard",
-      url: "/dashboard",
-      icon: LayoutIcon,
+      title: "Ana Sayfa",
+      url: "/",
+      icon: HouseIcon,
     },
     {
-      title: "Ürünler",
-      url: "/products",
-      icon: PackageIcon,
+      title: "Başvurular",
+      url: "/basvurular",
+      icon: NotePencilIcon,
     },
     {
-      title: "Müşteriler",
-      url: "/customers",
-      icon: UsersIcon,
+      title: "Ödemeler",
+      url: "/odemeler",
+      icon: CreditCardIcon,
     },
     {
-      title: "Ayarlar",
-      url: "/settings",
-      icon: GearIcon,
+      title: "Kurum Hakkında",
+      url: "/kurum-hakkinda",
+      icon: BuildingsIcon,
     },
+
   ]
+
   return (
     <aside>
-      <SidebarProvider>
-        <Sidebar>
-          <SidebarContent>
-            <SidebarGroup>
-              <SidebarGroupLabel>Yönetim Paneli</SidebarGroupLabel>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {items.map((item) => (
-                    <SidebarMenuItem key={item.title}>
-                      <SidebarMenuButton asChild>
-                        <a href={item.url}>
-                          <item.icon size={20} weight="regular" />
-                          <span>{item.title}</span>
-                        </a>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </SidebarGroup>
-          </SidebarContent>
-        </Sidebar>
-      </SidebarProvider>
+      <Sidebar collapsible="offcanvas" className="min-h-content">
+        <SidebarContent>
+          <SidebarGroup>
+            <SidebarGroupLabel>Yönetim Paneli</SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {items.map((item) => (
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton asChild>
+                      <a href={item.url}>
+                        <item.icon size={20} weight="regular" />
+                        <span>{item.title}</span>
+                      </a>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        </SidebarContent>
+      </Sidebar>
     </aside>
   )
 }
