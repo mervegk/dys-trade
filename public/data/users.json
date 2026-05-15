@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ayşe Yılmaz",
+      "role": "SUPER_ADMIN",
+      "email": "admin@dystrade.com",
+      "password": "admin123",
+      "accessScope": "ALL",
+      "activeCompanyId": 101
+    },
+    {
+      "id": 2,
+      "name": "Mehmet Demir",
+      "role": "YETKILI",
+      "email": "ahmet@firmab.com",
+      "password": "yetkili123",
+      "accessScope": "SINGLE",
+      "activeCompanyId": 102
+    },
+    {
+      "id": 3,
+      "name": "Selin Çelik",
+      "role": "YETKILI",
+      "email": "selin@firmac.com",
+      "password": "yetkili123",
+      "accessScope": "SINGLE",
+      "activeCompanyId": 103
+    }
+  ]
+}

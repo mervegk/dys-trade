@@ -1,0 +1,22 @@
+{
+  "companies": [
+    {
+      "id": 101,
+      "name": "A Şirketi (Merkez)",
+      "logo": "https://unsplash.com/illustrations/an-orange-and-white-circle-with-the-letter-o-on-it-wK0VyQOlYd8",
+      "plan": "Enterprise"
+    },
+    {
+      "id": 102,
+      "name": "B Lojistik",
+      "logo": "https://unsplash.com/illustrations/a-yellow-star-is-shown-on-a-white-background-NUOXaRzEIRw",
+      "plan": "Professional"
+    },
+    {
+      "id": 103,
+      "name": "C Teknoloji",
+      "logo": "https://unsplash.com/illustrations/a-simple-sketch-of-a-dogs-head-4Uab1yg92S0",
+      "plan": "Free"
+    }
+  ]
+}

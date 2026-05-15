@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Index from "@/components/dashboard/Index";
 
 export default function Home() {

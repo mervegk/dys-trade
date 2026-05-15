@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "SUPER_ADMIN": [
+      "manage_all_companies",
+      "view_audit_logs",
+      "edit_users",
+      "delete_records"
+    ],
+    "YETKILI": [
+      "view_own_company",
+      "update_status",
+      "create_report"
+    ]
+  }
+}
