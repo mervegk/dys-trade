@@ -39,7 +39,8 @@ export default function Login() {
       const result = await signIn("credentials", {
         email: value.email,
         password: value.password,
-        redirect: false,
+        callbackUrl: '/',
+        redirect: true
       })
 
       setIsPending(false)
@@ -52,8 +53,7 @@ export default function Login() {
         toast.success("Giriş başarılı!", {
           description: "Yönlendiriliyor...",
         })
-        router.push("/")
-        router.refresh()
+
       }
     },
   })

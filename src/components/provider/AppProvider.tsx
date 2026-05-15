@@ -8,9 +8,7 @@ export default function AppProvider({ children }: { children: React.ReactNode })
   return (
     <Provider store={store}>
       <SessionProvider>
-        <AuthCheck>
-          {children}
-        </AuthCheck>
+        {children}
       </SessionProvider>
     </Provider>
   )

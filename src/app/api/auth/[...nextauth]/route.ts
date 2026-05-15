@@ -47,7 +47,7 @@ export const authOptions: AuthOptions = {
             permissions: userPermissions
           };
         } catch (error) {
-          console.error("Auth Hatası:", error)
+          console.error("Yetkilendirme Hatası:", error)
           return null;
         }
       }

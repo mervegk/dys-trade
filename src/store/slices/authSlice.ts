@@ -23,11 +23,10 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    setAuth: (state, action: PayloadAction<{ user: any; activeCompany: any; permissions: string[] }>) => {
-      state.user = action.payload.user;
-      state.activeCompany = action.payload.activeCompany;
-      state.permissions = action.payload.permissions;
-      state.isAuthenticated = true;
+    setAuth: (state, action: PayloadAction<Partial<AuthState>>) => {
+      Object.assign(state, action.payload)
+
+      state.isAuthenticated = !!state.user
     },
     logout: (state) => {
       state.user = null;

@@ -1,19 +1,22 @@
-"use client";
-
-import { useSession } from "next-auth/react";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setAuth } from "@/store/slices/authSlice";
-import { RootState } from "@/store/store";
+'use client'
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setAuth } from '@/store/slices/authSlice';
+import { RootState } from '@/store/store';
 
 export default function AuthCheck({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
   const { data: session, status } = useSession();
   const dispatch = useDispatch();
 
   const isAuthInRedux = useSelector((state: RootState) => state.auth.isAuthenticated);
 
+
   useEffect(() => {
-    if (status === "authenticated" && session?.user && !isAuthInRedux) {
+
+    if (status === 'authenticated' && session?.user && !isAuthInRedux) {
       dispatch(
         setAuth({
           user: {

@@ -18,12 +18,12 @@ export default function TabContent() {
   if (tabs.length === 0) return;
 
   return (
-    <div>
+    <>
       {tabs.map(tab => (
-        <div key={tab.id} className={tab.id === activeTabId ? 'block' : 'hidden'}>
+        <section key={tab.id} className={`h-full ${tab.id === activeTabId ? 'block' : 'hidden'}`}>
           {pageMap[tab.path] ?? <div className='p-4'>Sayfa bulunamadı</div>}
-        </div>
+        </section>
       ))}
-    </div>
+    </>
   )
 }
