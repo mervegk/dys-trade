@@ -16,13 +16,18 @@ export default function HeaderTop() {
   const dispatch = useDispatch()
 
   const auth = useSelector((state: RootState) => state.auth)
+  const activeCompany = useSelector(
+    (state: RootState) => state.auth.activeCompany
+  )
+
+  console.log('Active company in HeaderTop: ', activeCompany);
 
   const handleChange = (value: string) => {
     dispatch(
       setAuth({
         user: auth.user,
         permissions: auth.permissions,
-        activeCompany: value
+        activeCompany: Number(value)
       })
     )
   }
@@ -30,7 +35,7 @@ export default function HeaderTop() {
   return (
     <section className='bg-zinc-300'>
       <Select
-        value={auth.activeCompany}
+        value={activeCompany?.toString()}
         onValueChange={handleChange}
       >
         <SelectTrigger className="w-full max-w-48">
@@ -42,7 +47,7 @@ export default function HeaderTop() {
             {companies.companies.map((item) => (
               <SelectItem
                 key={item.id}
-                value={item.id}
+                value={item.id.toString()}
               >
                 {item.name}
               </SelectItem>

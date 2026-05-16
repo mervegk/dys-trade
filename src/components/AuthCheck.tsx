@@ -1,13 +1,11 @@
 'use client'
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setAuth } from '@/store/slices/authSlice';
 import { RootState } from '@/store/store';
 
 export default function AuthCheck({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
   const { data: session, status } = useSession();
   const dispatch = useDispatch();
 
@@ -25,7 +23,7 @@ export default function AuthCheck({ children }: { children: React.ReactNode }) {
             email: session.user.email,
             role: session.user.role,
           },
-          activeCompany: session.user.activeCompany,
+          activeCompany: session.user.activeCompany.id,
           permissions: session.user.permissions,
         })
       );

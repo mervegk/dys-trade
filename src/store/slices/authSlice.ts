@@ -7,7 +7,7 @@ export interface AuthState {
     email?: string | null;
     role: string;
   } | null;
-  activeCompany: any;
+  activeCompany: number | null;
   permissions: string[];
   isAuthenticated: boolean;
 }

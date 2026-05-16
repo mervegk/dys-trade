@@ -9,7 +9,7 @@ const pageMap: Record<string, React.ReactNode> = {
   '/': '/',
   '/basvurular': <Applications />,
   '/odemeler': <Payments />,
-  '/kurum-hakkinda': <AboutCompany />,
+  '/sirket-kunyesi': <AboutCompany />,
 }
 
 export default function TabContent() {

@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils"
 import { Tab } from '@/store/slices/tabSlice';
 import { RootState } from '@/store/store';
 
-
 export default function TabBar() {
   const dispatch = useDispatch()
   const { tabs, activeTabId } = useSelector((state: RootState) => state.tabs)

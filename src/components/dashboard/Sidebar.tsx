@@ -15,7 +15,6 @@ import {
   CreditCardIcon,
   BuildingsIcon
 } from "@phosphor-icons/react"
-import Link from 'next/link';
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "@/store/store";
 import { openTab } from "@/store/slices/tabSlice";
@@ -42,8 +41,8 @@ export default function SidebarComp({ }: Props) {
       icon: CreditCardIcon,
     },
     {
-      title: "Kurum Hakkında",
-      url: "/kurum-hakkinda",
+      title: "Şirket Künyesi",
+      url: "/sirket-kunyesi",
       icon: BuildingsIcon,
     },
 

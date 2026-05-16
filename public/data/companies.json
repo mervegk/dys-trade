@@ -3,20 +3,97 @@
     {
       "id": 101,
       "name": "A Şirketi (Merkez)",
-      "logo": "https://unsplash.com/illustrations/an-orange-and-white-circle-with-the-letter-o-on-it-wK0VyQOlYd8",
-      "plan": "Enterprise"
+      "commission": 15,
+      "contract": "https://ontheline.trincoll.edu/images/bookdown/sample-local-pdf.pdf",
+      "logo": "https://images.unsplash.com/vector-1739893036536-d76cb86365e2?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "payments": [
+        {
+          "id": 1,
+          "date": "2026-05-01",
+          "grossAmount": 100000,
+          "taxDeduction": 20000,
+          "commissionDeduction": 15000,
+          "netAmount": 65000
+        },
+        {
+          "id": 2,
+          "date": "2026-05-10",
+          "grossAmount": 75000,
+          "taxDeduction": 15000,
+          "commissionDeduction": 11250,
+          "netAmount": 48750
+        },
+        {
+          "id": 3,
+          "date": "2026-05-15",
+          "grossAmount": 50000,
+          "taxDeduction": 10000,
+          "commissionDeduction": 7500,
+          "netAmount": 32500
+        }
+      ],
+      "paymentSummary": {
+        "totalGrossAmount": 225000,
+        "totalTaxDeduction": 45000,
+        "totalCommissionDeduction": 33750,
+        "totalNetAmount": 146250
+      }
     },
     {
       "id": 102,
       "name": "B Lojistik",
-      "logo": "https://unsplash.com/illustrations/a-yellow-star-is-shown-on-a-white-background-NUOXaRzEIRw",
-      "plan": "Professional"
+      "commission": 22,
+      "contract": "https://pdfobject.com/pdf/sample.pdf",
+      "logo": "https://images.unsplash.com/vector-1749120085205-99aadceddc93?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "payments": [],
+      "paymentSummary": {}
     },
     {
       "id": 103,
       "name": "C Teknoloji",
+      "commission": 18,
+      "contract": "https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf",
       "logo": "https://images.unsplash.com/vector-1754139083029-a7cc9247e4ad?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "plan": "Free"
+      "payments": [
+        {
+          "id": 1,
+          "date": "2026-04-03",
+          "grossAmount": 180000,
+          "taxDeduction": 36000,
+          "commissionDeduction": 32400,
+          "netAmount": 111600
+        },
+        {
+          "id": 2,
+          "date": "2026-04-17",
+          "grossAmount": 95000,
+          "taxDeduction": 19000,
+          "commissionDeduction": 17100,
+          "netAmount": 58900
+        },
+        {
+          "id": 3,
+          "date": "2026-05-02",
+          "grossAmount": 210000,
+          "taxDeduction": 42000,
+          "commissionDeduction": 37800,
+          "netAmount": 130200
+        },
+        {
+          "id": 4,
+          "date": "2026-05-11",
+          "grossAmount": 67000,
+          "taxDeduction": 13400,
+          "commissionDeduction": 12060,
+          "netAmount": 41540
+        }
+      ],
+      "paymentSummary": {
+        "totalGrossAmount": 552000,
+        "totalTaxDeduction": 110400,
+        "totalCommissionDeduction": 99360,
+        "totalNetAmount": 342240
+      }
     }
   ]
 }

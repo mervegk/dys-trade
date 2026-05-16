@@ -1,5 +1,4 @@
 "use client"
-
 import * as React from 'react'
 import { useForm } from '@tanstack/react-form'
 import { toast } from 'sonner'
@@ -14,6 +13,9 @@ import {
   FieldGroup,
   FieldLabel,
 } from "@/components/ui/field"
+import { useDispatch, useSelector } from 'react-redux'
+import { setAuth } from '@/store/slices/authSlice'
+import { RootState } from '@/store/store'
 
 
 const loginSchema = z.object({
@@ -23,7 +25,10 @@ const loginSchema = z.object({
 
 export default function Login() {
   const router = useRouter()
+  const dispatch = useDispatch()
   const [isPending, setIsPending] = React.useState(false)
+
+  const auth = useSelector((state: RootState) => state.auth)
 
   const form = useForm({
     defaultValues: {
@@ -40,7 +45,7 @@ export default function Login() {
         email: value.email,
         password: value.password,
         callbackUrl: '/',
-        redirect: true
+        redirect: false
       })
 
       setIsPending(false)
@@ -49,12 +54,19 @@ export default function Login() {
         toast.error("Giriş başarısız!", {
           description: "E-posta veya şifre hatalı.",
         })
-      } else {
-        toast.success("Giriş başarılı!", {
-          description: "Yönlendiriliyor...",
-        })
-
       }
+
+      const sessionRes = await fetch('/api/auth/session');
+      const session = await sessionRes.json();
+      dispatch(
+        setAuth({
+          user: session.user,
+          permissions: session.user.permissions,
+          activeCompany: session.user.activeCompany,
+        })
+      );
+
+      router.push("/");
     },
   })
 
